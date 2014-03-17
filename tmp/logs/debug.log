@@ -1,0 +1,120 @@
+2014-03-17 17:37:16 Debug: Notice (8): Undefined variable: article in [C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+include - APP/Template\Articles\add.ctp, line 5
+Cake\View\View::_evaluate() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 878
+Cake\View\View::_render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 841
+Cake\View\View::render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 461
+Cake\Controller\Controller::render() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 627
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 198
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-03-17 17:37:17 Debug: Notice (8): Undefined variable: article in [C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+include - APP/Template\Articles\add.ctp, line 5
+Cake\View\View::_evaluate() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 878
+Cake\View\View::_render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 841
+Cake\View\View::render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 461
+Cake\Controller\Controller::render() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 627
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 198
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-03-17 17:37:18 Debug: Notice (8): Undefined variable: article in [C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+include - APP/Template\Articles\add.ctp, line 5
+Cake\View\View::_evaluate() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 878
+Cake\View\View::_render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 841
+Cake\View\View::render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 461
+Cake\Controller\Controller::render() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 627
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 198
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-03-17 17:37:18 Debug: Notice (8): Undefined variable: article in [C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+include - APP/Template\Articles\add.ctp, line 5
+Cake\View\View::_evaluate() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 878
+Cake\View\View::_render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 841
+Cake\View\View::render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 461
+Cake\Controller\Controller::render() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 627
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 198
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-03-17 17:37:19 Debug: Notice (8): Undefined variable: article in [C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+include - APP/Template\Articles\add.ctp, line 5
+Cake\View\View::_evaluate() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 878
+Cake\View\View::_render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 841
+Cake\View\View::render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 461
+Cake\Controller\Controller::render() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 627
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 198
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-03-17 17:37:19 Debug: Notice (8): Undefined variable: article in [C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+include - APP/Template\Articles\add.ctp, line 5
+Cake\View\View::_evaluate() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 878
+Cake\View\View::_render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 841
+Cake\View\View::render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 461
+Cake\Controller\Controller::render() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 627
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 198
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-03-17 17:37:19 Debug: Notice (8): Undefined variable: article in [C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+include - APP/Template\Articles\add.ctp, line 5
+Cake\View\View::_evaluate() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 878
+Cake\View\View::_render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 841
+Cake\View\View::render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 461
+Cake\Controller\Controller::render() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 627
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 198
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-03-17 17:37:20 Debug: Notice (8): Undefined variable: article in [C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+include - APP/Template\Articles\add.ctp, line 5
+Cake\View\View::_evaluate() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 878
+Cake\View\View::_render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 841
+Cake\View\View::render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 461
+Cake\Controller\Controller::render() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 627
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 198
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-03-17 17:37:20 Debug: Notice (8): Undefined variable: article in [C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+include - APP/Template\Articles\add.ctp, line 5
+Cake\View\View::_evaluate() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 878
+Cake\View\View::_render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 841
+Cake\View\View::render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 461
+Cake\Controller\Controller::render() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 627
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 198
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-03-17 17:56:17 Debug: Notice (8): Undefined variable: article in [C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+include - APP/Template\Articles\add.ctp, line 5
+Cake\View\View::_evaluate() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 878
+Cake\View\View::_render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 841
+Cake\View\View::render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 461
+Cake\Controller\Controller::render() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 627
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 198
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+

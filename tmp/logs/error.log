@@ -1,0 +1,718 @@
+2014-02-26 09:25:58 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must be an instance of Cake\Datasource\EntityInterface, array given, called in C:\xampp\htdocs\cakephp-posts\branches\3\App\Controller\PostsController.php on line 32 and defined in [C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\ORM\Table::save() - ROOT\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084
+App\Controller\PostsController::add() - APP/Controller\PostsController.php, line 32
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\Controller\Controller::invokeAction() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 401
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 191
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-02-26 09:25:58 Error: Fatal Error (1): Call to a member function isNew() on a non-object in [C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\ORM\Table.php, line 1091]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-02-26 09:25:58 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on a non-object
+Request URL: /cakephp-posts/branches/3/posts/add
+Stack Trace:
+#0 C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 1091)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-02-26 09:32:13 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must be an instance of Cake\Datasource\EntityInterface, array given, called in C:\xampp\htdocs\cakephp-posts\branches\3\App\Controller\PostsController.php on line 32 and defined in [C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\ORM\Table::save() - ROOT\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084
+App\Controller\PostsController::add() - APP/Controller\PostsController.php, line 32
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\Controller\Controller::invokeAction() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 401
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 191
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-02-26 09:44:45 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must be an instance of Cake\Datasource\EntityInterface, array given, called in C:\xampp\htdocs\cakephp-posts\branches\3\App\Controller\PostsController.php on line 32 and defined in [C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\ORM\Table::save() - ROOT\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084
+App\Controller\PostsController::add() - APP/Controller\PostsController.php, line 32
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\Controller\Controller::invokeAction() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 401
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 191
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-02-26 09:44:57 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must be an instance of Cake\Datasource\EntityInterface, array given, called in C:\xampp\htdocs\cakephp-posts\branches\3\App\Controller\PostsController.php on line 32 and defined in [C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\ORM\Table::save() - ROOT\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084
+App\Controller\PostsController::add() - APP/Controller\PostsController.php, line 32
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\Controller\Controller::invokeAction() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 401
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 191
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-02-26 09:44:57 Error: Fatal Error (1): Call to a member function isNew() on a non-object in [C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\ORM\Table.php, line 1091]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-02-26 09:44:57 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on a non-object
+Request URL: /cakephp-posts/branches/3/posts/add
+Stack Trace:
+#0 C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 1091)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-02-26 09:52:07 Error: [Cake\Error\MissingActionException] Action PostsController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'edit',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /cakephp-posts/branches/3/posts/edit/1
+Stack Trace:
+#0 C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(191): Cake\Controller\Controller->invokeAction(Object(Cake\Network\Request))
+#1 C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PostsController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\xampp\htdocs\cakephp-posts\branches\3\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+2014-02-26 09:57:15 Warning: Warning (4096): Argument 1 passed to Cake\Utility\Hash::get() must be of the type array, object given, called in C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\Network\Request.php on line 932 and defined in [C:\xampp\htdocs\cakephp-posts\branches\3\vendor\cakephp\cakephp\src\Utility\Hash.php, line 41]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\Utility\Hash::get() - ROOT\vendor\cakephp\cakephp\src\Utility\Hash.php, line 41
+Cake\Network\Request::data() - ROOT\vendor\cakephp\cakephp\src\Network\Request.php, line 932
+Cake\View\Form\NullContext::val() - ROOT\vendor\cakephp\cakephp\src\View\Form\NullContext.php, line 63
+Cake\View\Helper\FormHelper::_initInputField() - ROOT\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 2084
+Cake\View\Helper\FormHelper::__call() - ROOT\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 1268
+Cake\View\Helper\FormHelper::text() - ROOT\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 898
+Cake\View\Helper\FormHelper::_getInput() - ROOT\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 898
+Cake\View\Helper\FormHelper::input() - ROOT\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 865
+include - APP/Template\Posts\edit.ctp, line 6
+Cake\View\View::_evaluate() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 878
+Cake\View\View::_render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 841
+Cake\View\View::render() - ROOT\vendor\cakephp\cakephp\src\View\View.php, line 461
+Cake\Controller\Controller::render() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 634
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 198
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-02-27 16:37:56 Error: [Cake\Error\MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /app-master/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(191): Cake\Controller\Controller->invokeAction(Object(Cake\Network\Request))
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+2014-02-27 16:38:16 Error: [Cake\Error\MissingActionException] Action UsersController::signup() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'signup',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /app-master/users/signup
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(191): Cake\Controller\Controller->invokeAction(Object(Cake\Network\Request))
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+2014-02-27 16:38:45 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must be an instance of Cake\Datasource\EntityInterface, array given, called in C:\xampp\htdocs\app-master\App\Controller\UsersController.php on line 30 and defined in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\ORM\Table::save() - ROOT\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084
+App\Controller\UsersController::add() - APP/Controller\UsersController.php, line 30
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\Controller\Controller::invokeAction() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 401
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 191
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-02-27 16:38:45 Error: Fatal Error (1): Call to a member function isNew() on a non-object in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1091]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-02-27 16:38:45 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on a non-object
+Request URL: /app-master/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 1091)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-02-27 16:38:52 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must be an instance of Cake\Datasource\EntityInterface, array given, called in C:\xampp\htdocs\app-master\App\Controller\UsersController.php on line 30 and defined in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\ORM\Table::save() - ROOT\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084
+App\Controller\UsersController::add() - APP/Controller\UsersController.php, line 30
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\Controller\Controller::invokeAction() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 401
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 191
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-02-27 16:38:52 Error: Fatal Error (1): Call to a member function isNew() on a non-object in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1091]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-02-27 16:38:52 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on a non-object
+Request URL: /app-master/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 1091)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-02-27 17:09:46 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must be an instance of Cake\Datasource\EntityInterface, array given, called in C:\xampp\htdocs\app-master\App\Controller\UsersController.php on line 30 and defined in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\ORM\Table::save() - ROOT\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084
+App\Controller\UsersController::add() - APP/Controller\UsersController.php, line 30
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\Controller\Controller::invokeAction() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 401
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 191
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-02-27 17:09:46 Error: Fatal Error (1): Call to a member function isNew() on a non-object in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1091]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-02-27 17:09:46 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on a non-object
+Request URL: /app-master/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 1091)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-02-27 17:18:54 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'demodemo' for key 'username'
+Request URL: /app-master/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(154): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Query.php(205): Cake\Database\Statement\StatementDecorator->execute()
+#2 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1224): Cake\Database\Query->execute()
+#3 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1155): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#4 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1098): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#5 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Connection.php(466): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1099): Cake\Database\Connection->transactional(Object(Closure))
+#7 C:\xampp\htdocs\app-master\App\Controller\UsersController.php(31): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#8 [internal function]: App\Controller\UsersController->add()
+#9 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Controller\Controller.php(401): ReflectionMethod->invokeArgs(Object(App\Controller\UsersController), Array)
+#10 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(191): Cake\Controller\Controller->invokeAction(Object(Cake\Network\Request))
+#11 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+2014-02-27 18:13:31 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must be an instance of Cake\Datasource\EntityInterface, array given, called in C:\xampp\htdocs\app-master\App\Controller\UsersController.php on line 44 and defined in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\ORM\Table::save() - ROOT\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084
+App\Controller\UsersController::add() - APP/Controller\UsersController.php, line 44
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\Controller\Controller::invokeAction() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 401
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 191
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-02-27 18:13:31 Error: Fatal Error (1): Call to a member function isNew() on a non-object in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1091]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-02-27 18:13:31 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on a non-object
+Request URL: /app-master/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 1091)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-02-27 18:14:14 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must be an instance of Cake\Datasource\EntityInterface, array given, called in C:\xampp\htdocs\app-master\App\Controller\UsersController.php on line 44 and defined in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\ORM\Table::save() - ROOT\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084
+App\Controller\UsersController::add() - APP/Controller\UsersController.php, line 44
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\Controller\Controller::invokeAction() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 401
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 191
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-02-27 18:14:37 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must be an instance of Cake\Datasource\EntityInterface, array given, called in C:\xampp\htdocs\app-master\App\Controller\UsersController.php on line 44 and defined in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\ORM\Table::save() - ROOT\vendor\cakephp\cakephp\src\ORM\Table.php, line 1084
+App\Controller\UsersController::add() - APP/Controller\UsersController.php, line 44
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\Controller\Controller::invokeAction() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 401
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 191
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-02-27 18:14:37 Error: Fatal Error (1): Call to a member function isNew() on a non-object in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1091]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-02-27 18:14:37 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on a non-object
+Request URL: /app-master/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 1091)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-10 13:19:21 Error: [Cake\Error\MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /app-master/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(191): Cake\Controller\Controller->invokeAction(Object(Cake\Network\Request))
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+2014-03-10 13:21:46 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'demodemodemo' for key 'username'
+Request URL: /app-master/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(154): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Query.php(205): Cake\Database\Statement\StatementDecorator->execute()
+#2 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1225): Cake\Database\Query->execute()
+#3 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1156): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#4 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1099): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#5 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Connection.php(466): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1100): Cake\Database\Connection->transactional(Object(Closure))
+#7 C:\xampp\htdocs\app-master\App\Controller\UsersController.php(44): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#8 [internal function]: App\Controller\UsersController->add()
+#9 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Controller\Controller.php(394): ReflectionMethod->invokeArgs(Object(App\Controller\UsersController), Array)
+#10 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(191): Cake\Controller\Controller->invokeAction(Object(Cake\Network\Request))
+#11 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+2014-03-16 15:07:49 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'demo222222' for key 'username'
+Request URL: /app-master/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(154): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Query.php(205): Cake\Database\Statement\StatementDecorator->execute()
+#2 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1225): Cake\Database\Query->execute()
+#3 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1156): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#4 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1099): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#5 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Connection.php(466): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1100): Cake\Database\Connection->transactional(Object(Closure))
+#7 C:\xampp\htdocs\app-master\App\Controller\UsersController.php(44): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#8 [internal function]: App\Controller\UsersController->add()
+#9 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Controller\Controller.php(394): ReflectionMethod->invokeArgs(Object(App\Controller\UsersController), Array)
+#10 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(191): Cake\Controller\Controller->invokeAction(Object(Cake\Network\Request))
+#11 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+2014-03-17 10:54:04 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must be an instance of Cake\Datasource\EntityInterface, array given, called in C:\xampp\htdocs\app-master\App\Controller\UsersController.php on line 45 and defined in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1085]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 132
+Cake\ORM\Table::save() - ROOT\vendor\cakephp\cakephp\src\ORM\Table.php, line 1085
+App\Controller\UsersController::add() - APP/Controller\UsersController.php, line 45
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\Controller\Controller::invokeAction() - ROOT\vendor\cakephp\cakephp\src\Controller\Controller.php, line 394
+Cake\Routing\Dispatcher::_invoke() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 191
+Cake\Routing\Dispatcher::dispatch() - ROOT\vendor\cakephp\cakephp\src\Routing\Dispatcher.php, line 166
+[main] - ROOT\webroot\index.php, line 42
+
+2014-03-17 10:54:04 Error: Fatal Error (1): Call to a member function isNew() on a non-object in [C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php, line 1092]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 10:54:05 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on a non-object
+Request URL: /app-master/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 1092)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 10:54:34 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'demo121212' for key 'username'
+Request URL: /app-master/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(154): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Query.php(205): Cake\Database\Statement\StatementDecorator->execute()
+#2 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1225): Cake\Database\Query->execute()
+#3 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1156): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#4 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1099): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#5 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Connection.php(466): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(1100): Cake\Database\Connection->transactional(Object(Closure))
+#7 C:\xampp\htdocs\app-master\App\Controller\UsersController.php(44): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#8 [internal function]: App\Controller\UsersController->add()
+#9 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Controller\Controller.php(394): ReflectionMethod->invokeArgs(Object(App\Controller\UsersController), Array)
+#10 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(191): Cake\Controller\Controller->invokeAction(Object(Cake\Network\Request))
+#11 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+2014-03-17 11:16:40 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'apps_posts.articles' doesn't exist
+Request URL: /app-master/
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(107): Cake\Database\Schema\Collection->_executeSql('SHOW FULL COLUM...', Array)
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(337): Cake\Database\Schema\Collection->describe('articles')
+#2 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Query.php(126): Cake\ORM\Table->schema()
+#3 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Query.php(109): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ArticlesTable))
+#4 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(893): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ArticlesTable))
+#5 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(697): Cake\ORM\Table->query()
+#6 C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php(11): Cake\ORM\Table->find('all')
+#7 [internal function]: App\Controller\ArticlesController->index()
+#8 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Controller\Controller.php(394): ReflectionMethod->invokeArgs(Object(App\Controller\ArticlesController), Array)
+#9 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(191): Cake\Controller\Controller->invokeAction(Object(Cake\Network\Request))
+#10 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+2014-03-17 11:21:36 Error: [Cake\Error\MissingControllerException] Controller class Add could not be found.
+Exception Attributes: array (
+  'class' => 'Add',
+  'plugin' => NULL,
+  'prefix' => NULL,
+)
+Request URL: /app-master/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+2014-03-17 11:21:55 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'apps_beta_3.entities' doesn't exist
+Request URL: /app-master/articles/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(107): Cake\Database\Schema\Collection->_executeSql('SHOW FULL COLUM...', Array)
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(337): Cake\Database\Schema\Collection->describe('entities')
+#2 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(385): Cake\ORM\Table->schema()
+#3 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(162): Cake\ORM\Table->primaryKey()
+#4 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(935): Cake\View\Form\EntityContext->isPrimaryKey('title')
+#5 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(916): Cake\View\Helper\FormHelper->_inputType('title', Array)
+#6 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(845): Cake\View\Helper\FormHelper->_parseOptions('title', Array)
+#7 C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp(6): Cake\View\Helper\FormHelper->input('title')
+#8 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(878): include('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(841): Cake\View\View->_evaluate('C:\xampp\htdocs...', Array)
+#10 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(461): Cake\View\View->_render('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Controller\Controller.php(627): Cake\View\View->render(NULL, NULL)
+#12 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(198): Cake\Controller\Controller->render()
+#13 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+2014-03-17 11:22:05 Error: [Cake\Error\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => NULL,
+  'prefix' => NULL,
+)
+Request URL: /app-master/article/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+2014-03-17 11:22:11 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'apps_beta_3.entities' doesn't exist
+Request URL: /app-master/articles/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(107): Cake\Database\Schema\Collection->_executeSql('SHOW FULL COLUM...', Array)
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(337): Cake\Database\Schema\Collection->describe('entities')
+#2 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(385): Cake\ORM\Table->schema()
+#3 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(162): Cake\ORM\Table->primaryKey()
+#4 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(935): Cake\View\Form\EntityContext->isPrimaryKey('title')
+#5 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(916): Cake\View\Helper\FormHelper->_inputType('title', Array)
+#6 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(845): Cake\View\Helper\FormHelper->_parseOptions('title', Array)
+#7 C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp(6): Cake\View\Helper\FormHelper->input('title')
+#8 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(878): include('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(841): Cake\View\View->_evaluate('C:\xampp\htdocs...', Array)
+#10 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(461): Cake\View\View->_render('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Controller\Controller.php(627): Cake\View\View->render(NULL, NULL)
+#12 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(198): Cake\Controller\Controller->render()
+#13 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+2014-03-17 16:55:16 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'apps_beta_3.entities' doesn't exist
+Request URL: /app-master/articles/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(107): Cake\Database\Schema\Collection->_executeSql('SHOW FULL COLUM...', Array)
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(337): Cake\Database\Schema\Collection->describe('entities')
+#2 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(385): Cake\ORM\Table->schema()
+#3 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(162): Cake\ORM\Table->primaryKey()
+#4 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(935): Cake\View\Form\EntityContext->isPrimaryKey('title')
+#5 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(916): Cake\View\Helper\FormHelper->_inputType('title', Array)
+#6 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(845): Cake\View\Helper\FormHelper->_parseOptions('title', Array)
+#7 C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp(6): Cake\View\Helper\FormHelper->input('title')
+#8 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(878): include('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(841): Cake\View\View->_evaluate('C:\xampp\htdocs...', Array)
+#10 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(461): Cake\View\View->_render('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Controller\Controller.php(627): Cake\View\View->render(NULL, NULL)
+#12 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(198): Cake\Controller\Controller->render()
+#13 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+2014-03-17 17:02:24 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'apps_beta_3.entities' doesn't exist
+Request URL: /app-master/articles/add
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(107): Cake\Database\Schema\Collection->_executeSql('SHOW FULL COLUM...', Array)
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(337): Cake\Database\Schema\Collection->describe('entities')
+#2 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\ORM\Table.php(385): Cake\ORM\Table->schema()
+#3 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(162): Cake\ORM\Table->primaryKey()
+#4 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(935): Cake\View\Form\EntityContext->isPrimaryKey('title')
+#5 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(916): Cake\View\Helper\FormHelper->_inputType('title', Array)
+#6 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(845): Cake\View\Helper\FormHelper->_parseOptions('title', Array)
+#7 C:\xampp\htdocs\app-master\App\Template\Articles\add.ctp(6): Cake\View\Helper\FormHelper->input('title')
+#8 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(878): include('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(841): Cake\View\View->_evaluate('C:\xampp\htdocs...', Array)
+#10 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\View\View.php(461): Cake\View\View->_render('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Controller\Controller.php(627): Cake\View\View->render(NULL, NULL)
+#12 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(198): Cake\Controller\Controller->render()
+#13 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+2014-03-17 17:14:14 Error: Fatal Error (1): Class 'App\Controller\NotFoundException' not found in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 62]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:14:14 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\NotFoundException' not found
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\Cont...', 'C:\xampp\htdocs...', 62)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:15:27 Error: Fatal Error (4): syntax error, unexpected 'use' (T_USE), expecting ',' or ';' in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 23]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:15:27 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'use' (T_USE), expecting ',' or ';'
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 23)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:15:29 Error: Fatal Error (4): syntax error, unexpected 'use' (T_USE), expecting ',' or ';' in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 23]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:15:29 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'use' (T_USE), expecting ',' or ';'
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 23)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:15:30 Error: Fatal Error (4): syntax error, unexpected 'use' (T_USE), expecting ',' or ';' in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 23]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:15:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'use' (T_USE), expecting ',' or ';'
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 23)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:15:30 Error: Fatal Error (4): syntax error, unexpected 'use' (T_USE), expecting ',' or ';' in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 23]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:15:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'use' (T_USE), expecting ',' or ';'
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 23)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:15:44 Error: Fatal Error (1): Class 'Cake\ORM\Error\NotFoundException' not found in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 63]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:15:44 Error: [Cake\Error\FatalErrorException] Class 'Cake\ORM\Error\NotFoundException' not found
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\ORM...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:16:14 Error: Fatal Error (1): Class 'Cake\ORM\Error\NotFoundException' not found in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 63]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:16:14 Error: [Cake\Error\FatalErrorException] Class 'Cake\ORM\Error\NotFoundException' not found
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\ORM...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:16:15 Error: Fatal Error (1): Class 'Cake\ORM\Error\NotFoundException' not found in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 63]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:16:15 Error: [Cake\Error\FatalErrorException] Class 'Cake\ORM\Error\NotFoundException' not found
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\ORM...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:16:17 Error: Fatal Error (1): Class 'Cake\ORM\Error\NotFoundException' not found in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 63]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:16:17 Error: [Cake\Error\FatalErrorException] Class 'Cake\ORM\Error\NotFoundException' not found
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\ORM...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:18:29 Error: Fatal Error (1): Class 'Cake\ORM\Error\NotFoundException' not found in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 63]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:18:29 Error: [Cake\Error\FatalErrorException] Class 'Cake\ORM\Error\NotFoundException' not found
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\ORM...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:18:30 Error: Fatal Error (1): Class 'Cake\ORM\Error\NotFoundException' not found in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 63]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:18:30 Error: [Cake\Error\FatalErrorException] Class 'Cake\ORM\Error\NotFoundException' not found
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\ORM...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:18:30 Error: Fatal Error (1): Class 'Cake\ORM\Error\NotFoundException' not found in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 63]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:18:30 Error: [Cake\Error\FatalErrorException] Class 'Cake\ORM\Error\NotFoundException' not found
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\ORM...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:18:30 Error: Fatal Error (1): Class 'Cake\ORM\Error\NotFoundException' not found in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 63]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:18:30 Error: [Cake\Error\FatalErrorException] Class 'Cake\ORM\Error\NotFoundException' not found
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\ORM...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:18:30 Error: Fatal Error (1): Class 'Cake\ORM\Error\NotFoundException' not found in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 63]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:18:30 Error: [Cake\Error\FatalErrorException] Class 'Cake\ORM\Error\NotFoundException' not found
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\ORM...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:26:03 Error: Fatal Error (1): Class 'Cake\ORM\Error\NotFoundException' not found in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 63]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 17:26:03 Error: [Cake\Error\FatalErrorException] Class 'Cake\ORM\Error\NotFoundException' not found
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'Cake\ORM...', 'C:\xampp\htdocs...', 63)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 17:36:13 Error: [Cake\Error\NotFoundException] Invalid article
+Request URL: /app-master/articles/edit
+Stack Trace:
+#0 [internal function]: App\Controller\ArticlesController->edit()
+#1 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Controller\Controller.php(394): ReflectionMethod->invokeArgs(Object(App\Controller\ArticlesController), Array)
+#2 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(191): Cake\Controller\Controller->invokeAction(Object(Cake\Network\Request))
+#3 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(166): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#4 C:\xampp\htdocs\app-master\webroot\index.php(42): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+2014-03-17 18:06:07 Error: Fatal Error (1): Call to a member function get() on a non-object in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 38]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 18:06:07 Error: [Cake\Error\FatalErrorException] Call to a member function get() on a non-object
+Request URL: /app-master/articles
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 38)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 18:06:25 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 38]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 18:06:25 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /app-master/articles
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 38)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 18:06:25 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 38]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 18:06:25 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /app-master/articles
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 38)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 18:06:26 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 38]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 18:06:26 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /app-master/articles
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 38)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+2014-03-17 18:06:26 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\app-master\App\Controller\ArticlesController.php, line 38]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 182
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - ROOT\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php, line 85
+[main] - [internal], line ??
+
+2014-03-17 18:06:26 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /app-master/articles
+Stack Trace:
+#0 C:\xampp\htdocs\app-master\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(85): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 38)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
