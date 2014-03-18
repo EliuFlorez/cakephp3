@@ -13,15 +13,28 @@
  */
 namespace App\Controller;
 
+// Controllers
 use App\Controller\AppController;
 
+// Core App
+use Cake\Core\App;
+
+// Example: Configure::write('debug', false);
+use Cake\Core\Configure;
+
+// Events
 use Cake\Event\Event;
 
+// ORM
 use Cake\ORM\Entity;
 use Cake\ORM\TableRegistry;
+
+// Utility
 use Cake\Utility\Security;
-use Cake\Error\NotFoundException;
+
+// Error
 use Cake\ORM\Error\RecordNotFoundException;
+use Cake\Error\NotFoundException;
 
 /**
  * ArticlesController class
@@ -32,11 +45,12 @@ class ArticlesController extends AppController {
     public $helpers = [
 		'Html', 
 		'Form', 
-		'Session'
+		'Session',
 	];
 	
     public $components = [
-		'Session'
+		'Session',
+		'RequestHandler',
 	];
 
 	/**
@@ -127,6 +141,75 @@ class ArticlesController extends AppController {
 		}
 
 		$this->set('article', $article);
+	}
+	
+	/**
+	 * Articles ajax method
+	 *
+	 * @return void
+	 */
+	public function ajax() {
+		// Render View = False
+		$this->layout     = false;
+		$this->autoRender = false;
+		
+		// Ajax = True
+		if($this->request->is('ajax')){
+			Configure::write('debug', false);
+			if($id = $this->request->data['id']){
+				// Return Articles
+				$return = $article = $this->Articles->get($id);
+			} else {
+				$return = array('return' => false);
+			}
+		} else {
+			$return = array('ajaxError' => false);
+		}
+		
+		// Return JSON
+		echo json_encode($return);
+		
+		// Clear
+		unset($return);
+	}
+	
+	/**
+	 * Articles ajax method
+	 *
+	 * @return void
+	 */
+	public function ajaxDelete() {
+		// Render View = False
+		$this->layout     = false;
+		$this->autoRender = false;
+		
+		// Ajax = True
+		if($this->request->is('ajax')){
+			Configure::write('debug', false);
+			if($id = $this->request->data['id']){
+				// Articles Get
+				$article = $this->Articles->get($id);
+				if(!empty($article)){
+					if ($this->Articles->delete($article)) {
+						$return = array('return' => true);
+					} else {
+						$return = array('return' => false);
+					}
+				} else {
+					$return = array('return' => false);
+				}
+			} else {
+				$return = array('return' => false);
+			}
+		} else {
+			$return = array('ajaxError' => false);
+		}
+		
+		// Return JSON
+		echo json_encode($return);
+		
+		// Clear
+		unset($return);
 	}
 	
 	/**

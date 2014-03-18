@@ -22,8 +22,10 @@
                 'Delete',
                 ['action' => 'delete', $article->id],
                 ['confirm' => 'Are you sure?'])
-            ?>
-            <?= $this->Html->link('Edit', ['action' => 'edit', $article->id]) ?>
+            ?> - 
+            <?= $this->Html->link('Edit', ['action' => 'edit', $article->id]) ?> - 
+			<a id="<?= $article->id ?>" href="javascript:void(0);" class="article_delete">Ajax Delete</a> - 
+			<a id="<?= $article->id ?>" href="javascript:void(0);" class="article_status">Ajax Estatus</a>
         </td>
     </tr>
     <?php endforeach; ?>
