@@ -7,7 +7,6 @@
         <th>Id</th>
         <th>Title</th>
         <th>Actions</th>
-        <th>Created</th>
     </tr>
 
 <!-- Here's where we loop through our $articles query object, printing out article info -->
@@ -25,9 +24,6 @@
                 ['confirm' => 'Are you sure?'])
             ?>
             <?= $this->Html->link('Edit', ['action' => 'edit', $article->id]) ?>
-        </td>
-        <td>
-            <?= $article->created->format(DATE_RFC850) ?>
         </td>
     </tr>
     <?php endforeach; ?>

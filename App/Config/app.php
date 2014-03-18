@@ -74,7 +74,7 @@ $config = [
  * timestamping regardless of debug value.
  */
 	'Asset' => [
-		// 'timestamp' => true,
+		'timestamp' => true,
 	],
 
 /**
@@ -215,7 +215,7 @@ $config = [
 			'host' => 'localhost',
 			'login' => 'root',
 			'password' => '',
-			'database' => 'apps_beta_3',
+			'database' => 'apps_cakephp',
 			'prefix' => false,
 			'encoding' => 'utf8',
 		],
@@ -230,7 +230,7 @@ $config = [
 			'host' => 'localhost',
 			'login' => 'root',
 			'password' => '',
-			'database' => 'apps_posts_test',
+			'database' => 'apps_cakephp_test',
 			'prefix' => false,
 			'encoding' => 'utf8',
 		],
