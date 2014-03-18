@@ -91,9 +91,9 @@ class ArticlesController extends AppController {
 	 */
     public function add() {
         $article = $this->Articles->newEntity($this->request->data);
+	
 		if ($this->request->is(['post', 'put'])) {
-			if($this->Articles->save(new Entity($this->request->data))){
-			//if ($this->Articles->save($article)) {
+			if ($this->Articles->save($article)) {
                 $this->Session->setFlash(__('Your article has been saved.'));
                 return $this->redirect(['action' => 'index']);
             }
@@ -118,9 +118,8 @@ class ArticlesController extends AppController {
 		$article = $this->Articles->get($id);
 		
 		if ($this->request->is(['post', 'put'])) {
-			//$this->Articles->patchEntity($article, $this->request->data);
-			if($this->Articles->save(new Entity($this->request->data))){
-			//if ($this->Articles->save($article)) {
+			$this->Articles->patchEntity($article, $this->request->data);
+			if ($this->Articles->save($article)) {
 				$this->Session->setFlash(__('Your article has been updated.'));
 				return $this->redirect(['action' => 'index']);
 			}

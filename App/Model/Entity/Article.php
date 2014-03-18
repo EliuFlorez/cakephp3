@@ -6,4 +6,8 @@ use Cake\ORM\Entity;
 
 class Article extends Entity {
 
+	public function initialize(array $config) {
+		
+	}
+
 }
