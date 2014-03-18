@@ -2692,9 +2692,7 @@ class TableTest extends \Cake\TestSuite\TestCase {
 		$article = $table->find('all')->where(['id' => 1])->contain(['tags'])->first();
 		$tags = $article->tags;
 		$this->assertNotEmpty($tags);
-		$tags[] = new \TestApp\Model\Entity\Tag([
-			'name' => 'Something New'
-		]);
+		$tags[] = new \TestApp\Model\Entity\Tag(['name' => 'Something New']);
 		$article->tags = $tags;
 		$this->assertSame($article, $table->save($article));
 		$tags = $article->tags;
@@ -2780,15 +2778,7 @@ class TableTest extends \Cake\TestSuite\TestCase {
 			->with($entity->author->supervisor, ['name' => 'Marc'])
 			->will($this->returnValue($entity->author->supervisor));
 
-		$options = new \ArrayObject([
-			'validate' => false,
-			'atomic' => false,
-			'associated' => []
-		]);
-		$supervisors->expects($this->once())
-			->method('validate')
-			->with($entity->author->supervisor, $options)
-			->will($this->returnValue(true));
+		$supervisors->expects($this->never())->method('validate');
 
 		$tags->expects($this->never())->method('_insert');
 
@@ -2817,6 +2807,7 @@ class TableTest extends \Cake\TestSuite\TestCase {
 		$table = TableRegistry::get('articles');
 		$table->belongsToMany('tags');
 		$tagsTable = TableRegistry::get('tags');
+		$source = ['source' => 'tags'];
 		$options = ['markNew' => false];
 
 		$article = new \Cake\ORM\Entity([
@@ -2825,10 +2816,10 @@ class TableTest extends \Cake\TestSuite\TestCase {
 
 		$newTag = new \TestApp\Model\Entity\Tag([
 			'name' => 'Foo'
-		]);
+		], $source);
 		$tags[] = new \TestApp\Model\Entity\Tag([
 			'id' => 3
-		], $options);
+		], $options + $source);
 		$tags[] = $newTag;
 
 		$tagsTable->save($newTag);

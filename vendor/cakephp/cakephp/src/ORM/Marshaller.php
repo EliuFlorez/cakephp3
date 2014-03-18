@@ -9,7 +9,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 3.0.0
+ * @since         3.0.0
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 namespace Cake\ORM;
@@ -98,6 +98,7 @@ class Marshaller {
 		$tableName = $this->_table->alias();
 		$entityClass = $this->_table->entityClass();
 		$entity = new $entityClass();
+		$entity->source($this->_table->alias());
 
 		if (isset($data[$tableName])) {
 			$data = $data[$tableName];
@@ -112,7 +113,7 @@ class Marshaller {
 				$value = $this->_marshalAssociation($assoc, $value, $nested);
 			} elseif ($columnType) {
 				$converter = Type::build($columnType);
-				$value = $converter->marshall($value);
+				$value = $converter->marshal($value);
 			}
 			$properties[$key] = $value;
 		}

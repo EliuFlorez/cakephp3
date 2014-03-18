@@ -110,6 +110,7 @@ class MarshallerTest extends TestCase {
 		$this->assertEquals($data, $result->toArray());
 		$this->assertTrue($result->dirty(), 'Should be a dirty entity.');
 		$this->assertNull($result->isNew(), 'Should be detached');
+		$this->assertEquals('Articles', $result->source());
 	}
 
 /**
@@ -525,6 +526,7 @@ class MarshallerTest extends TestCase {
 			'title' => 'Foo',
 			'body' => 'My Content'
 		]);
+		$entity->accessible('*', false);
 		$entity->accessible('author_id', true);
 		$entity->isNew(false);
 		$result = $marshall->merge($entity, $data, []);

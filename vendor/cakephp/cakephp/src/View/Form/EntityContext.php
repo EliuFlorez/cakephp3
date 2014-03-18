@@ -9,7 +9,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 3.0
+ * @since         3.0.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace Cake\View\Form;
@@ -120,7 +120,12 @@ class EntityContext implements ContextInterface {
 			if (is_array($entity) || $entity instanceof Traversable) {
 				$entity = (new Collection($entity))->first();
 			}
-			if ($entity instanceof Entity) {
+			$isEntity = $entity instanceof Entity;
+
+			if ($isEntity) {
+				$table = $entity->source();
+			}
+			if (!$table && $isEntity && get_class($entity) !== 'Cake\ORM\Entity') {
 				list($ns, $entityClass) = namespaceSplit(get_class($entity));
 				$table = Inflector::pluralize($entityClass);
 			}

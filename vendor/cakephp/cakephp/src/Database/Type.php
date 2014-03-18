@@ -11,7 +11,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 3.0.0
+ * @since         3.0.0
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 namespace Cake\Database;
@@ -35,6 +35,7 @@ class Type {
 	protected static $_types = [
 		'binary' => 'Cake\Database\Type\BinaryType',
 		'date' => 'Cake\Database\Type\DateType',
+		'time' => 'Cake\Database\Type\TimeType',
 		'datetime' => 'Cake\Database\Type\DateTimeType',
 		'timestamp' => 'Cake\Database\Type\DateTimeType',
 		'uuid' => 'Cake\Database\Type\UuidType',
@@ -246,7 +247,7 @@ class Type {
  * @param mixed $value The value to convert.
  * @return mixed Converted value.
  */
-	public function marshall($value) {
+	public function marshal($value) {
 		return $value;
 	}
 

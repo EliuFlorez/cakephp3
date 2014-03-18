@@ -9,7 +9,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 3.0.0
+ * @since         3.0.0
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 namespace Cake\Database;
@@ -1135,7 +1135,11 @@ class Query implements ExpressionInterface, IteratorAggregate {
 			$limit = 25;
 			$this->limit($limit);
 		}
-		$this->offset(($num - 1) * $limit);
+		$offset = ($num - 1) * $limit;
+		if (PHP_INT_MAX <= $offset) {
+			$offset = PHP_INT_MAX;
+		}
+		$this->offset((int)$offset);
 		return $this;
 	}
 

@@ -9,7 +9,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 3.0.0
+ * @since         3.0.0
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 namespace Cake\ORM;
@@ -1125,7 +1125,7 @@ class Table implements RepositoryInterface, EventListener {
 		$associated = $options['associated'];
 		$options['associated'] = [];
 
-		if (!$this->validate($entity, $options)) {
+		if ($options['validate'] && !$this->validate($entity, $options)) {
 			return false;
 		}
 
@@ -1170,6 +1170,7 @@ class Table implements RepositoryInterface, EventListener {
 				$event = new Event('Model.afterSave', $this, compact('entity', 'options'));
 				$this->getEventManager()->dispatch($event);
 				$entity->isNew(false);
+				$entity->source($this->alias());
 				$success = true;
 			}
 		}

@@ -9,7 +9,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 3.0.0
+ * @since         3.0.0
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 namespace Cake\ORM;
@@ -426,7 +426,7 @@ class Query extends DatabaseQuery {
  * - having: Maps to the having method
  * - contain: Maps to the contain options for eager loading
  * - join: Maps to the join method
- * - join: Maps to the page method
+ * - page: Maps to the page method
  *
  * @return \Cake\ORM\Query
  */

@@ -9,7 +9,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 3.0.0
+ * @since         3.0.0
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 namespace Cake\Datasource;
@@ -95,7 +95,14 @@ trait EntityTrait {
  *
  * @var array
  */
-	protected $_accessible = [];
+	protected $_accessible = ['*' => true];
+
+/**
+ * The alias of the repository this entity came from
+ *
+ * @var string
+ */
+	protected $_repositoryAlias;
 
 /**
  * Magic getter to access properties that has be set in this entity
@@ -644,7 +651,11 @@ trait EntityTrait {
  */
 	public function accessible($property, $set = null) {
 		if ($set === null) {
-			return !empty($this->_accessible[$property]) || !empty($this->_accessible['*']);
+			$value = isset($this->_accessible[$property]) ?
+				$this->_accessible[$property] :
+				null;
+
+			return ($value === null && !empty($this->_accessible['*'])) || $value;
 		}
 
 		if ($property === '*') {
@@ -660,6 +671,22 @@ trait EntityTrait {
 		}
 
 		return $this;
+	}
+
+/**
+ * Returns the alias of the repository from wich this entity came from.
+ *
+ * If called with no arguments, it returns the alias of the repository
+ * this entity came from if it is known.
+ *
+ * @param string the alias of the repository
+ * @return string
+ */
+	public function source($alias = null) {
+		if ($alias === null) {
+			return $this->_repositoryAlias;
+		}
+		$this->_repositoryAlias = $alias;
 	}
 
 /**
@@ -684,7 +711,8 @@ trait EntityTrait {
 			'properties' => $this->_properties,
 			'dirty' => $this->_dirty,
 			'virtual' => $this->_virtual,
-			'errors' => $this->_errors
+			'errors' => $this->_errors,
+			'repository' => $this->_repositoryAlias
 		];
 	}
 

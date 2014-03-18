@@ -860,6 +860,7 @@ class EntityTest extends TestCase {
  */
 	public function testAccessible() {
 		$entity = new Entity;
+		$entity->accessible('*', false);
 		$this->assertFalse($entity->accessible('foo'));
 		$this->assertFalse($entity->accessible('bar'));
 
@@ -936,6 +937,7 @@ class EntityTest extends TestCase {
 	public function testSetWithAccessible() {
 		$entity = new Entity(['foo' => 1, 'bar' => 2]);
 		$options = ['guard' => true];
+		$entity->accessible('*', false);
 		$entity->accessible('foo', true);
 		$entity->set('bar', 3, $options);
 		$entity->set('foo', 4, $options);
@@ -955,6 +957,7 @@ class EntityTest extends TestCase {
 	public function testSetWithAccessibleWithArray() {
 		$entity = new Entity(['foo' => 1, 'bar' => 2]);
 		$options = ['guard' => true];
+		$entity->accessible('*', false);
 		$entity->accessible('foo', true);
 		$entity->set(['bar' => 3, 'foo' => 4], $options);
 		$this->assertEquals(2, $entity->get('bar'));
@@ -973,6 +976,7 @@ class EntityTest extends TestCase {
  */
 	public function testSetWithAccessibleSingleProperty() {
 		$entity = new Entity(['foo' => 1, 'bar' => 2]);
+		$entity->accessible('*', false);
 		$entity->accessible('title', true);
 
 		$entity->set(['title' => 'test', 'body' => 'Nope']);
@@ -1005,16 +1009,32 @@ class EntityTest extends TestCase {
 		$entity = new Entity(['foo' => 'bar'], ['markClean' => true]);
 		$entity->accessible('name', true);
 		$entity->virtualProperties(['baz']);
+		$entity->dirty('foo', true);
 		$entity->errors('foo', ['An error']);
+		$entity->source('foos');
 		$result = $entity->__debugInfo();
 		$expected = [
-			'new' => true,
-			'accessible' => ['name'],
+			'new' => null,
+			'accessible' => ['*' => true, 'name' => true],
 			'properties' => ['foo' => 'bar'],
 			'dirty' => ['foo' => true],
 			'virtual' => ['baz'],
-			'errors' => ['foo' => ['An error']]
+			'errors' => ['foo' => ['An error']],
+			'repository' => 'foos'
 		];
+		$this->assertSame($expected, $result);
+	}
+
+/**
+ * Tests the source method
+ *
+ * @return void
+ */
+	public function testSource() {
+		$entity = new Entity;
+		$this->assertNull($entity->source());
+		$entity->source('foos');
+		$this->assertEquals('foos', $entity->source());
 	}
 
 }
