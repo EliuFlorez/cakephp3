@@ -18,17 +18,10 @@ use App\Controller\AppController;
 
 // Core App
 use Cake\Core\App;
-
-// Example: Configure::write('debug', false);
 use Cake\Core\Configure;
 
 // Events
 use Cake\Event\Event;
-
-// ORM
-use Cake\ORM\Entity;
-use Cake\ORM\Table;
-use Cake\ORM\TableRegistry;
 
 // Utility
 use Cake\Utility\Security;
@@ -86,7 +79,7 @@ class ArticlesController extends AppController {
 			'limit' => 10,
 		];
 		
-		$articles = $this->Articles->find('all', $options)->toArray();
+		$articles = $this->Articles->find('all', $options);
 		
 		$this->set('articles', $articles);
     }

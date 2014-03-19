@@ -16,27 +16,17 @@ namespace App\Controller;
 // Controllers
 use App\Controller\AppController;
 
+// Auth
+use Cake\Controller\ComponentRegistry;
+use Cake\Controller\Component\AuthComponent;
+use Cake\Controller\Component\SessionComponent;
+
 // Core App
 use Cake\Core\App;
 use Cake\Core\Configure;
 
 // Events
 use Cake\Event\Event;
-
-// Auth
-use Cake\Controller\ComponentRegistry;
-use Cake\Controller\Component\AuthComponent;
-use Cake\Controller\Component\SessionComponent;
-
-// NetWork
-use Cake\Network\Request;
-use Cake\Network\Response;
-use Cake\Network\Session;
-use Cake\Network\Email\Email;
-
-// ORM
-use Cake\ORM\Entity;
-use Cake\ORM\TableRegistry;
 
 // Utility
 use Cake\Utility\Security;
@@ -55,12 +45,16 @@ class UsersController extends AppController {
 	public $components = [
 		'Auth' => [
 			'authenticate' => [
+				'all' => [
+					'userModel' => 'Users.Users',
+					'scope' => ['Users.is_active' => 1]
+				],
 				//'Blowfish' => [
 				//	'scope' => ['User.is_active' => true]
 				//],
 				'Form' => [
 					'fields' => ['username' => 'email']
-				]
+				],
 			],
 			'loginAction' => [
 				'controller' => 'users', 'action' => 'login'
@@ -219,12 +213,6 @@ class UsersController extends AppController {
 					return $this->redirect(['action' => 'edit']);
 				}
 			}
-
-			// Clear Password
-			unset(
-				$requestData['User']['password'],
-				$requestData['User']['role_id']
-			);
 			
 			// Set
 			$this->set('user', $user);
