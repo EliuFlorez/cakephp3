@@ -11,44 +11,30 @@
  */
 namespace App\Model\Table;
 
-use Cake\ORM\Query;
 use Cake\ORM\Table;
 
 /**
- * Articles table class
+ * Users table class
  *
  */
-class ArticlesTable extends Table {
+class UsersTable extends Table {
 	
-	protected $_table = 'articles';
+	protected $_table = 'users';
 	
 	public $validate = [
-        'title' => [
-            'rule' => 'notEmpty'
+        'username' => [
+            'rule' => 'notEmpty',
         ],
-        'body' => [
-            'rule' => 'notEmpty'
+        'password' => [
+            'rule' => 'notEmpty',
         ]
     ];
 	
 	public function initialize(array $config) {
 		/*
 		// BelongsTo
-		$this->belongsTo('authors');
-		
-		// BelongsToMany
-		$this->belongsToMany('tags');
-		
-		// HasMany
-		$this->hasMany('ArticlesTags');
+		$this->belongsTo('roles');
 		*/
 	}
-	
-	public function findPublished(Query $query, array $options = []) {
-        $query->where([
-            'Articles.id' =>1
-        ]);
-        return $query;
-    }
 	
 }

@@ -14,15 +14,9 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Article entity class used for asserting correct loading
+ * User entity class used for asserting correct loading
  *
  */
-class Article extends Entity {
+class User extends Entity {
 
-	protected $_accessible = [
-        'title' => true,
-        'body' => true,
-        '*' => false
-    ];
-	
 }

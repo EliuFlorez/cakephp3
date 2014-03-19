@@ -27,6 +27,7 @@ use Cake\Event\Event;
 
 // ORM
 use Cake\ORM\Entity;
+use Cake\ORM\Table;
 use Cake\ORM\TableRegistry;
 
 // Utility
@@ -79,6 +80,9 @@ class ArticlesController extends AppController {
 	 * @return void
 	 */
     public function index() {
+		//$articles = $this->Articles->find('all')->where(['Articles.id >' => '1'])->limit(10);
+		//$articles->find('all', ['conditions' => ['Articles.id >' => 1],'limit' => 10]);
+		//$articles = $this->Articles->find('published');
 		$articles = $this->Articles->find('all');
 		$this->set('articles', $articles);
     }
@@ -105,7 +109,7 @@ class ArticlesController extends AppController {
 	 */
     public function add() {
         $article = $this->Articles->newEntity($this->request->data);
-	
+		
 		if ($this->request->is(['post', 'put'])) {
 			if ($this->Articles->save($article)) {
                 $this->Session->setFlash(__('Your article has been saved.'));

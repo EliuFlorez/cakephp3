@@ -54,6 +54,13 @@ use Cake\Routing\Router;
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 	
+	// Users
+	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
+	Router::connect('/users/login', array('controller' => 'users', 'action' => 'login'));
+	Router::connect('/users/add', array('controller' => 'users', 'action' => 'add'));
+	Router::connect('/users/edit/*', array('controller' => 'users', 'action' => 'edit'));
+
+	// Articles
 	Router::connect('/articles', array('controller' => 'articles', 'action' => 'index'));
 	Router::connect('/articles/add', array('controller' => 'articles', 'action' => 'add'));
 	Router::connect('/articles/edit/*', array('controller' => 'articles', 'action' => 'edit'));
