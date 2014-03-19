@@ -40,23 +40,12 @@ class ArticlesController extends AppController {
 		'Html', 
 		'Form', 
 		'Session',
+		'UploadPack',
 	];
 	
     public $components = [
 		'Session',
 		'RequestHandler',
-	];
-
-	public $actsAs = [
-		'UploadPack.Upload' => [
-			'image' => [
-				'styles' => [
-					'big' => '200x200',
-					'small' => '120x120',
-					'thumb' => '80x80'
-				]
-			]
-		]
 	];
 	
 	/**

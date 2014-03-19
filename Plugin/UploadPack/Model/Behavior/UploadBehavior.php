@@ -1,20 +1,23 @@
 <?php
 /**
- * This file is a part of UploadPack - a plugin that makes file uploads in CakePHP as easy as possible.
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
- * UploadBehavior
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
  *
- * UploadBehavior does all the job of saving files to disk while saving records to database. For more info read UploadPack documentation.
- *
- * joe bartlett's lovingly handcrafted tweaks add several resize modes. see "more on styles" in the documentation.
- *
- * @author Michał Szajbe (michal.szajbe@gmail.com) and joe bartlett (contact@jdbartlett.com)
- * @link http://github.com/szajbus/uploadpack
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         1.2.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+namespace UploadBehavior\Model\Behavior;
+
+use Cake\ORM\Behavior;
 use Cake\Network\Http;
-use Cake\Model\Behavior;
  
-class UploadBehavior extends ModelBehavior {
+class UploadBehavior extends Behavior {
 
     private static $__settings = array();
 
@@ -37,7 +40,8 @@ class UploadBehavior extends ModelBehavior {
             self::$__settings[$model->name][$field] = array_merge($defaults, $array);
         }
     }
-
+	
+	//public function beforeSave(Event $event, Entity $entity, ArrayObject $options) {
     public function beforeSave(Model $model, $options = array()) {
         $this->_reset();
         foreach (self::$__settings[$model->name] as $field => $settings) {
@@ -63,6 +67,7 @@ class UploadBehavior extends ModelBehavior {
         return true;
     }
 
+    //public function afterSave(Event $event, Entity $entity) {
     public function afterSave(Model $model, $create, $options = array()) {
         if (!$create) {
             $this->_deleteFiles($model);
@@ -70,16 +75,19 @@ class UploadBehavior extends ModelBehavior {
         $this->_writeFiles($model);
     }
 
+    //public function beforeDelete(Event $event, $entity, array $options = []){
     public function beforeDelete(Model $model, $cascade = true) {
         $this->_reset();
         $this->_prepareToDeleteFiles($model);
         return true;
     }
 
+	////public function afterDelete(Event $event, $entity, array $options = []){
     public function afterDelete(Model $model) {
         $this->_deleteFiles($model);
     }
 
+    //public function beforeValidate($event, $entity, $options, $validator){
     public function beforeValidate(Model $model, $options = array()) {
         foreach (self::$__settings[$model->name] as $field => $settings) {
             if (isset($model->data[$model->name][$field])) {
