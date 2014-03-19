@@ -55,6 +55,9 @@ class UsersController extends AppController {
 	public $components = [
 		'Auth' => [
 			'authenticate' => [
+				//'Blowfish' => [
+				//	'scope' => ['User.is_active' => true]
+				//],
 				'Form' => [
 					'fields' => ['username' => 'email']
 				]
@@ -73,7 +76,7 @@ class UsersController extends AppController {
 		'Session',
 		'RequestHandler'
 	];
-
+	
 	/**
 	 * This controller uses Users models
 	 *
@@ -90,7 +93,7 @@ class UsersController extends AppController {
 	 * @return void
 	 */
 	public function beforeFilter(Event $event) {
-	
+		
 	}
 	
 	/**

@@ -80,10 +80,14 @@ class ArticlesController extends AppController {
 	 * @return void
 	 */
     public function index() {
-		//$articles = $this->Articles->find('all')->where(['Articles.id >' => '1'])->limit(10);
-		//$articles->find('all', ['conditions' => ['Articles.id >' => 1],'limit' => 10]);
-		//$articles = $this->Articles->find('published');
-		$articles = $this->Articles->find('all');
+		$options = [
+			'conditions' => ['Articles.id' => 2],
+			'order' => ['Articles.id DESC'],
+			'limit' => 10,
+		];
+		
+		$articles = $this->Articles->find('all', $options)->toArray();
+		
 		$this->set('articles', $articles);
     }
 
