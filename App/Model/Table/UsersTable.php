@@ -24,9 +24,11 @@ class UsersTable extends Table {
 	public $validate = [
         'username' => [
             'rule' => 'notEmpty',
+			'message' => 'Por favor, introduzca nombre de usuario'
         ],
         'password' => [
             'rule' => 'notEmpty',
+			'message' => 'Por favor, introduzca la contrasena'
         ]
     ];
 	

@@ -46,8 +46,9 @@ class ArticlesTable extends Table {
 	
 	public function findPublished(Query $query, array $options = []) {
         $query->where([
-            'Articles.id' =>1
-        ]);
+				'Articles.id >=' => 2
+			]
+		);
         return $query;
     }
 	
