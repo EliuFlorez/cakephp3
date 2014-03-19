@@ -100,7 +100,7 @@ $config = [
 	 */
 		'_cake_core_' => [
 			'className' => 'File',
-			'prefix' => 'myapp_cake_core_',
+			'prefix' => 'app_cake_core_',
 			'path' => CACHE . 'persistent/',
 			'serialize' => true,
 			'duration' => '+10 seconds',
@@ -112,7 +112,7 @@ $config = [
 	 */
 		'_cake_model_' => [
 			'className' => 'File',
-			'prefix' => 'my_app_cake_model_',
+			'prefix' => 'app_cake_model_',
 			'path' => CACHE . 'models/',
 			'serialize' => 'File',
 			'duration' => '+10 seconds',
