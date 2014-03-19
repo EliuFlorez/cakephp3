@@ -2,6 +2,8 @@ CREATE TABLE users (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50),
     password VARCHAR(50),
+    role VARCHAR(20),
+	is_active int(1) NOT NULL DEFAULT '1',
     created DATETIME DEFAULT NULL,
     modified DATETIME DEFAULT NULL
 );
