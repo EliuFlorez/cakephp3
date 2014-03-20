@@ -39,4 +39,19 @@ class UsersTable extends Table {
 		*/
 	}
 	
+	/**
+	 * beforeSave method
+	 *
+	 * @param Event $event
+	 * @return void
+	 */
+	public function beforeSave() {
+		if (isset($this->data['User']['password'])) {
+			$this->data['User']['password'] = Security::hash($this->data['User']['password'], 'blowfish');
+		} else {
+			unset($this->data['User']['password']);
+		}
+		return true;
+	}
+	
 }

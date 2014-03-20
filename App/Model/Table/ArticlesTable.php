@@ -31,6 +31,18 @@ class ArticlesTable extends Table {
         ]
     ];
 	
+	public $actsAs = [
+		'UploadPack.UploadHelper' => [
+			'image' => [
+				'styles' => [
+					'big' => '200x200',
+					'small' => '120x120',
+					'thumb' => '80x80'
+				]
+			]
+		]
+	];
+	
 	public function initialize(array $config) {
 		/*
 		// BelongsTo

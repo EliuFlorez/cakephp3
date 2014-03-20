@@ -13,27 +13,18 @@
  */
 namespace App\Controller;
 
-// Controllers
+/// App Controller
 use App\Controller\AppController;
 
-// Auth
 use Cake\Controller\ComponentRegistry;
 use Cake\Controller\Component\AuthComponent;
 use Cake\Controller\Component\SessionComponent;
-
-// Core App
 use Cake\Core\App;
 use Cake\Core\Configure;
-
-// Events
-use Cake\Event\Event;
-
-// Utility
-use Cake\Utility\Security;
-
-// Error
 use Cake\ORM\Error\RecordNotFoundException;
 use Cake\Error\NotFoundException;
+use Cake\Event\Event;
+use Cake\Utility\Security;
 
 /**
  * UsersController class
@@ -47,11 +38,8 @@ class UsersController extends AppController {
 			'authenticate' => [
 				'all' => [
 					'userModel' => 'Users.Users',
-					'scope' => ['Users.is_active' => 1]
+					'scope' => ['Users.is_active' => true]
 				],
-				//'Blowfish' => [
-				//	'scope' => ['User.is_active' => true]
-				//],
 				'Form' => [
 					'fields' => ['username' => 'email']
 				],
@@ -87,22 +75,7 @@ class UsersController extends AppController {
 	 * @return void
 	 */
 	public function beforeFilter(Event $event) {
-		
-	}
-	
-	/**
-	 * beforeSave method
-	 *
-	 * @param Event $event
-	 * @return void
-	 */
-	public function beforeSave(Event $event, Entity $entity, ArrayObject $options) {
-		if (isset($this->data['User']['password'])) {
-			$this->data['User']['password'] = Security::hash($this->data['User']['password'], 'blowfish');
-		} else {
-			unset($this->data['User']['password']);
-		}
-		return true;
+		$this->Auth->allow();
 	}
 	
 	/**

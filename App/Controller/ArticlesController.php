@@ -40,7 +40,7 @@ class ArticlesController extends AppController {
 		'Html', 
 		'Form', 
 		'Session',
-		'UploadPack',
+		//'UploadPack.UploadHelper',
 	];
 	
     public $components = [
