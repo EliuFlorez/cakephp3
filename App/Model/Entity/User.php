@@ -19,4 +19,8 @@ use Cake\ORM\Entity;
  */
 class User extends Entity {
 
+	public function getFullName() {
+        return $this->name;
+    }
+	
 }
