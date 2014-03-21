@@ -228,6 +228,7 @@ trait ExternalAssociationTrait {
 		$fetchQuery = $this
 			->find('all')
 			->where($options['conditions'])
+			->eagerLoaded(true)
 			->hydrate($options['query']->hydrate());
 		$fetchQuery = $this->_addFilteringCondition($fetchQuery, $key, $filter);
 

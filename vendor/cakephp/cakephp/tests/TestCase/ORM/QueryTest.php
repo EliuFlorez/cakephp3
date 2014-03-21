@@ -1040,7 +1040,7 @@ class QueryTest extends TestCase {
  *
  * @return void
  */
-	public function testHydrateWithHasMany() {
+	public function testHydrateHasMany() {
 		$table = TableRegistry::get('authors');
 		TableRegistry::get('articles');
 		$table->hasMany('articles', [
@@ -1199,7 +1199,7 @@ class QueryTest extends TestCase {
  *
  * @return void
  */
-	public function testHydrateWithHasManyCustomEntity() {
+	public function testHydrateHasManyCustomEntity() {
 		$authorEntity = $this->getMockClass('\Cake\ORM\Entity', ['foo']);
 		$articleEntity = $this->getMockClass('\Cake\ORM\Entity', ['foo']);
 		$table = TableRegistry::get('authors', [
@@ -1813,6 +1813,32 @@ class QueryTest extends TestCase {
 			'repository' => $table
 		];
 		$this->assertSame($expected, $query->__debugInfo());
+	}
+
+/**
+ * Tests that the eagerLoaded function works and is transmitted correctly to eagerly
+ * loaded associations
+ *
+ * @return void
+ */
+	public function testEagerLoaded() {
+		$table = TableRegistry::get('authors');
+		$table->hasMany('articles');
+		$query = $table->find()->contain(['articles' => function($q) {
+			$this->assertTrue($q->eagerLoaded());
+			return $q;
+		}]);
+		$this->assertFalse($query->eagerLoaded());
+
+		$table->getEventManager()->attach(function($e, $q, $o, $primary) {
+			$this->assertTrue($primary);
+		}, 'Model.beforeFind');
+
+		TableRegistry::get('articles')
+			->getEventManager()->attach(function($e, $q, $o, $primary) {
+				$this->assertFalse($primary);
+			}, 'Model.beforeFind');
+		$query->all();
 	}
 
 }
