@@ -16,6 +16,7 @@ namespace App\Controller;
 /// App Controller
 use App\Controller\AppController;
 
+use Cake\Controller\Component;
 use Cake\Controller\ComponentRegistry;
 use Cake\Controller\Component\AuthComponent;
 use Cake\Controller\Component\SessionComponent;
@@ -36,11 +37,9 @@ class UsersController extends AppController {
 	public $components = [
 		'Auth' => [
 			'authenticate' => [
-				'all' => [
-					'userModel' => 'Users.Users',
-					'scope' => ['Users.is_active' => true]
-				],
 				'Form' => [
+					'userModel' => 'Users.Users',
+					'scope' => ['Users.is_active' => true],
 					'fields' => ['username' => 'email']
 				],
 			],
@@ -76,6 +75,26 @@ class UsersController extends AppController {
 	 */
 	public function beforeFilter(Event $event) {
 		$this->Auth->allow();
+		
+		$this->Auth->authenticate = [
+			'Form' => [
+				'userModel' => 'AuthUser',
+				'scope' => ['Users.is_active' => true],
+				'fields' => ['username' => 'email']
+			]
+		];
+		
+		if(isset($this->request->data['password'])){
+			$this->Auth->request->data = array(
+				'AuthUsers' => array(
+					'username' => $this->request->data['username'],
+					'password' => Security::hash($this->request->data['password'], 'blowfish')
+				)
+			);
+			$this->request->data['password'] = Security::hash($this->request->data['password'], 'blowfish');
+		} else {
+			unset($this->request->data['password']);
+		}
 	}
 	
 	/**

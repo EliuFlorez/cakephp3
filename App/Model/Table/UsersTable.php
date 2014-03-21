@@ -50,7 +50,7 @@ class UsersTable extends Table {
 	 */
 	public function beforeSave(Event $event, Entity $entity) {
 		if (!empty($entity->get('password'))) {
-			$entity->set('password', Security::hash($entity->get('password'), 'blowfish'));
+			$entity->set('password', Security::hash($entity->get('password'), 'blowfish', false));
 		}
 		return true;
 	}
