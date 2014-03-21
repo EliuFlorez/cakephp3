@@ -43,6 +43,11 @@ class UsersController extends AppController {
 					'fields' => ['username' => 'email']
 				],
 			],
+			'Form' => [
+				'userModel' => 'AuthUser',
+				'scope' => ['Users.is_active' => true],
+				'fields' => ['username' => 'email']
+			],
 			'loginAction' => [
 				'controller' => 'users', 'action' => 'login'
 			],
@@ -84,7 +89,7 @@ class UsersController extends AppController {
 			]
 		];
 		
-		if(isset($this->request->data['password'])){
+		if(isset($this->request->data['username']) && isset($this->request->data['password'])){
 			$this->Auth->request->data = array(
 				'AuthUsers' => array(
 					'username' => $this->request->data['username'],
