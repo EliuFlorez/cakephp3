@@ -13,7 +13,7 @@ namespace App\Model\Table;
 
 use Cake\Event\Event;
 use Cake\ORM\Table;
-use Cake\ORM\Table\Entity;
+use Cake\ORM\Entity;
 use Cake\Utility\Security;
 
 /**
@@ -50,7 +50,8 @@ class UsersTable extends Table {
 	 */
 	public function beforeSave(Event $event, Entity $entity) {
 		if (!empty($entity->get('password'))) {
-			$entity->set('password', Security::hash($entity->get('password'), 'blowfish', false));
+			$entity->set('password', Security::hash($entity->get('password'), null, true));
+			//$entity->set('password', Security::hash($entity->get('password'), 'blowfish', false));
 		}
 		return true;
 	}

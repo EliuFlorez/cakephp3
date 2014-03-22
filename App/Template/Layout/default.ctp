@@ -70,22 +70,25 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 		$(".article_delete").click(function(){
 			var id = parseInt($(".article_delete").attr("id"));
 			if(id > 0){
-				$.ajax({
-					url: 'articles/ajaxDelete',
-					type: 'POST',
-					dataType: 'JSON',
-					data: {id:id},
-					success: function(data){
-						if(data.value === false){
-							alert('error return');
-						} else {
-							alert('succes return');
+				var alertConfirm = confirm("Desea eliminar el registro");
+				if(alertConfirm){
+					$.ajax({
+						url: 'articles/ajaxDelete',
+						type: 'POST',
+						dataType: 'JSON',
+						data: {id:id},
+						success: function(data){
+							if(data.value === false){
+								alert('error return');
+							} else {
+								alert('succes return');
+							}
+						},
+						error: function(xhr, textStatus, error){
+							alert('Error js: ' + textStatus);
 						}
-					},
-					error: function(xhr, textStatus, error){
-						alert('Error js: ' + textStatus);
-					}
-				});
+					});
+				}
 			}
 			return false;
 		});

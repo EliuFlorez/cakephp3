@@ -75,14 +75,6 @@ class UsersController extends AppController {
 	public function beforeFilter(Event $event) {
 		// Allow
 		$this->Auth->allow();
-		
-		// Authenticate
-		$this->Auth->authenticate = [
-			'Form' => [
-				'userModel' => 'Users.Users',
-				'fields' => ['username' => 'email'],
-			]
-		];
 	}
 	
 	/**
@@ -113,12 +105,14 @@ class UsersController extends AppController {
 		
 		// POST, PUT
 		if ($this->request->is(['post', 'put'])) {
+			
 			// Request Data
 			if(!empty($this->request->data['username']) && !empty($this->request->data['password'])){
 				$this->Auth->request->data = array(
 					'Users' => array(
 						'username' => $this->request->data['username'],
-						'password' => Security::hash($this->request->data['password'], 'blowfish')
+						'password' => Security::hash($this->request->data['password'], null, true)
+						//'password' => Security::hash($this->request->data['password'], 'blowfish', false)
 					)
 				);
 			} else {
