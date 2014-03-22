@@ -39,14 +39,8 @@ class UsersController extends AppController {
 			'authenticate' => [
 				'Form' => [
 					'userModel' => 'Users.Users',
-					'scope' => ['Users.is_active' => true],
 					'fields' => ['username' => 'email']
 				],
-			],
-			'Form' => [
-				'userModel' => 'AuthUser',
-				'scope' => ['Users.is_active' => true],
-				'fields' => ['username' => 'email']
 			],
 			'loginAction' => [
 				'controller' => 'users', 'action' => 'login'
@@ -79,27 +73,16 @@ class UsersController extends AppController {
 	 * @return void
 	 */
 	public function beforeFilter(Event $event) {
+		// Allow
 		$this->Auth->allow();
 		
+		// Authenticate
 		$this->Auth->authenticate = [
 			'Form' => [
-				'userModel' => 'AuthUser',
-				'scope' => ['Users.is_active' => true],
-				'fields' => ['username' => 'email']
+				'userModel' => 'Users.Users',
+				'fields' => ['username' => 'email'],
 			]
 		];
-		
-		if(isset($this->request->data['username']) && isset($this->request->data['password'])){
-			$this->Auth->request->data = array(
-				'AuthUsers' => array(
-					'username' => $this->request->data['username'],
-					'password' => Security::hash($this->request->data['password'], 'blowfish')
-				)
-			);
-			$this->request->data['password'] = Security::hash($this->request->data['password'], 'blowfish');
-		} else {
-			unset($this->request->data['password']);
-		}
 	}
 	
 	/**
@@ -130,6 +113,18 @@ class UsersController extends AppController {
 		
 		// POST, PUT
 		if ($this->request->is(['post', 'put'])) {
+			// Request Data
+			if(!empty($this->request->data['username']) && !empty($this->request->data['password'])){
+				$this->Auth->request->data = array(
+					'Users' => array(
+						'username' => $this->request->data['username'],
+						'password' => Security::hash($this->request->data['password'], 'blowfish')
+					)
+				);
+			} else {
+				unset($this->request->data['password']);
+			}
+			
 			//Auth Login
 			if ($this->Auth->login()) {
 				// Redirects

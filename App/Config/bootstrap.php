@@ -9,7 +9,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 0.10.8.2117
+ * @since         0.10.8
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace App\Config;
@@ -59,6 +59,7 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\ErrorHandler;
 use Cake\Log\Log;
 use Cake\Network\Email\Email;
+use Cake\Network\Request;
 use Cake\Utility\Inflector;
 
 /**
@@ -127,6 +128,17 @@ Email::config(Configure::consume('Email'));
 Log::config(Configure::consume('Log'));
 
 /**
+ * Setup detectors for mobile and tablet.
+ */
+Request::addDetector('mobile', function($request) {
+	return (new \Detection\MobileDetect())->isMobile();
+});
+
+Request::addDetector('tablet', function($request) {
+	return (new \Detection\MobileDetect())->isTablet();
+});
+
+/**
  * Custom Inflector rules, can be set to correctly pluralize or singularize table, model, controller names or whatever other
  * string is passed to the inflection functions
  *
@@ -144,6 +156,5 @@ Log::config(Configure::consume('Log'));
  * Plugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
-
-Plugin::load('UploadPack');
 Plugin::loadAll();
+Plugin::load('UploadPack');

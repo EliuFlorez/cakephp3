@@ -9,7 +9,7 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         CakePHP(tm) v 0.10.0.1076
+ * @since         0.10.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
@@ -26,72 +26,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css([
-				'cake.generic',
-			]
-		);
-		
-		echo $this->Html->script([
-				'jquery.min',
-			]
-		);
-		
+		echo $this->Html->css('cake.generic');
+
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		
-		$(".article_status").click(function(){
-			var id = parseInt($(".article_status").attr("id"));
-			if(id > 0){
-				$.ajax({
-					url: 'articles/ajax',
-					type: 'POST',
-					dataType: 'JSON',
-					data: {id:id},
-					success: function(data){
-						if(data.value === false){
-							alert('error return');
-						} else {
-							alert('succes return');
-						}
-					},
-					error: function(xhr, textStatus, error){
-						alert('Error js: ' + textStatus);
-					}
-				});
-			}
-			return false;
-		});
-		
-		$(".article_delete").click(function(){
-			var id = parseInt($(".article_delete").attr("id"));
-			if(id > 0){
-				$.ajax({
-					url: 'articles/ajaxDelete',
-					type: 'POST',
-					dataType: 'JSON',
-					data: {id:id},
-					success: function(data){
-						if(data.value === false){
-							alert('error return');
-						} else {
-							alert('succes return');
-						}
-					},
-					error: function(xhr, textStatus, error){
-						alert('Error js: ' + textStatus);
-					}
-				});
-			}
-			return false;
-		});
-		
-	});
-</script>
 </head>
 <body>
 	<div id="container">

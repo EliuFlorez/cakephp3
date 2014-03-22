@@ -4,11 +4,10 @@ $config = [
  * Debug Level:
  *
  * Production Mode:
- * false: No error messages, errors, or warnings shown. Flash messages redirect.
+ * false: No error messages, errors, or warnings shown.
  *
  * Development Mode:
  * true: Errors and warnings shown.
- *
  */
 	'debug' => true,
 
@@ -60,7 +59,7 @@ $config = [
  *   You should treat it as extremely sensitive data.
  */
 	'Security' => [
-		'salt' => 'DDDD93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi',
+		'salt' => '1234567890',
 	],
 
 /**
@@ -89,7 +88,7 @@ $config = [
  */
 	'Cache' => [
 		'default' => [
-			'engine' => 'File',
+			'className' => 'File',
 		],
 
 	/**
@@ -112,7 +111,7 @@ $config = [
 			'className' => 'File',
 			'prefix' => 'app_cake_model_',
 			'path' => CACHE . 'models/',
-			'serialize' => 'File',
+			'serialize' => true,
 			'duration' => '+10 seconds',
 		],
 	],

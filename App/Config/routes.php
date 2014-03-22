@@ -53,18 +53,6 @@ use Cake\Routing\Router;
  * ...and connect the rest of 'Pages' controller's urls.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
-	
-	// Users
-	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
-	Router::connect('/users/login', array('controller' => 'users', 'action' => 'login'));
-	Router::connect('/users/add', array('controller' => 'users', 'action' => 'add'));
-	Router::connect('/users/edit/*', array('controller' => 'users', 'action' => 'edit'));
-
-	// Articles
-	Router::connect('/articles', array('controller' => 'articles', 'action' => 'index'));
-	Router::connect('/articles/add', array('controller' => 'articles', 'action' => 'add'));
-	Router::connect('/articles/edit/*', array('controller' => 'articles', 'action' => 'edit'));
-	Router::connect('/articles/delete/*', array('controller' => 'articles', 'action' => 'delete'));
 
 /**
  * Load all plugin routes.  See the Plugin documentation on
