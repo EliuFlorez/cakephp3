@@ -16,23 +16,16 @@ namespace App\Controller;
 /// App Controller
 use App\Controller\AppController;
 
+use Cake\Controller\Component;
 use Cake\Controller\ComponentRegistry;
 use Cake\Controller\Component\AuthComponent;
 use Cake\Controller\Component\SessionComponent;
-use Cake\Controller\Component\Auth\FormAuthenticate;
-use Cake\Controller\Controller;
 use Cake\Core\App;
 use Cake\Core\Configure;
 use Cake\Error;
+use Cake\Error\NotFoundException;
+use Cake\ORM\Error\RecordNotFoundException;
 use Cake\Event\Event;
-use Cake\Network\Request;
-use Cake\Network\Response;
-use Cake\Network\Session;
-use Cake\ORM\Entity;
-use Cake\ORM\TableRegistry;
-use Cake\Routing\Dispatcher;
-use Cake\Routing\Router;
-use Cake\TestSuite\TestCase;
 use Cake\Utility\Security;
 
 /**
@@ -46,9 +39,7 @@ class UsersController extends AppController {
 		'Auth' => [
 			'authenticate' => [
 				'Form' => [
-					'userModel' => 'Users',
-					'scope' => ['User.is_active' => true],
-					'fields' => ['username' => 'email']
+					'userModel' => 'Users.Users'
 				],
 			],
 			'loginAction' => [
@@ -113,87 +104,19 @@ class UsersController extends AppController {
 		$user = $this->Users->newEntity($this->request->data);
 		
 		// POST, PUT
-		//if ($this->request->is(['post', 'put'])) {
+		if ($this->request->is(['post', 'put'])) {
 			
 			// Request Data
 			if(!empty($this->request->data['username']) && !empty($this->request->data['password'])){
 				$this->Auth->request->data = array(
 					'Users' => array(
 						'username' => $this->request->data['username'],
-						'password' => Security::hash($this->request->data['password'], null, true)
-						//'password' => Security::hash($this->request->data['password'], 'blowfish', false)
+						'password' => $this->request->data['password']
 					)
 				);
 			} else {
 				unset($this->request->data['password']);
 			}
-			
-			// Validar
-			$this->Auth->request->data = array(
-				'Users' => array(
-					'username' => 'demo',
-					'password' => Security::hash('demo', null, true)
-				)
-			);
-			
-			echo '$this->Auth->request->data = return ';
-			print_r($this->Auth->request->data);
-			
-			echo '<br/><br/>';
-			
-			echo '$this->request->data = return';
-			print_r($this->request->data);
-			
-			echo '<br/><br/>';
-			
-			echo '$this->Auth->login() = return ';
-			echo ($this->Auth->login()) ? 'true' : 'false';
-			
-			echo '<br/><br/>';
-			
-			echo '$this->Auth->login($this->request->data) return ';
-			echo ($this->Auth->login($this->request->data)) ? 'true' : 'false';
-			
-			echo '<br/><br/>';
-			
-			echo '$this->Auth->logout() return ';
-			print_r($this->Auth->logout());
-			
-			echo '<br/><br/>';
-			echo '<br/><br/>';
-			
-			// Invalido
-			$this->Auth->request->data = array(
-				'Users' => array(
-					'username' => 'demo',
-					'password' => Security::hash('demo0000', null, true)
-				)
-			);
-			
-			echo '$this->Auth->request->data = return ';
-			print_r($this->Auth->request->data);
-			
-			echo '<br/><br/>';
-			
-			echo '$this->request->data = return';
-			print_r($this->request->data);
-			
-			echo '<br/><br/>';
-			
-			echo '$this->Auth->login() = return ';
-			echo ($this->Auth->login()) ? 'true' : 'false';
-			
-			echo '<br/><br/>';
-			
-			echo '$this->Auth->login($this->request->data) return ';
-			echo ($this->Auth->login($this->request->data)) ? 'true' : 'false';
-			
-			echo '<br/><br/>';
-			
-			echo '$this->Auth->logout() return ';
-			print_r($this->Auth->logout());
-			
-			die();
 			
 			//Auth Login
 			if ($this->Auth->login()) {
@@ -203,7 +126,7 @@ class UsersController extends AppController {
 				// Flash Message
 				$this->Session->setFlash('Nombre de usuario o contraseña invalido');
 			}
-        //}
+        }
 		
 		$this->set('user', $user);
 	}
