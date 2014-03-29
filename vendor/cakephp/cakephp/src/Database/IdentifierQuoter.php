@@ -1,7 +1,5 @@
 <?php
 /**
- * PHP Version 5.4
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -16,6 +14,7 @@
  */
 namespace Cake\Database;
 
+use Cake\Database\ExpressionInterface;
 use Cake\Database\Expression\Comparison;
 use Cake\Database\Expression\IdentifierExpression;
 use Cake\Database\Expression\OrderByExpression;
@@ -59,25 +58,32 @@ class IdentifierQuoter {
 			$this->_quoteParts($query);
 		}
 
-		$query->traverseExpressions(function($expression) {
-			if ($expression instanceof Comparison) {
-				$this->_quoteComparison($expression);
-				return;
-			}
-
-			if ($expression instanceof OrderByExpression) {
-				$this->_quoteOrderBy($expression);
-				return;
-			}
-
-			if ($expression instanceof IdentifierExpression) {
-				$this->_quoteIndetifierExpression($expression);
-				return;
-			}
-		});
-
+		$query->traverseExpressions([$this, 'quoteExpression']);
 		$query->valueBinder($binder);
 		return $query;
+	}
+
+/**
+ * Quotes identifiers inside expression objects
+ *
+ * @param \Cake\Database\ExpressionInterface $expression
+ * @return void
+ */
+	public function quoteExpression($expression) {
+		if ($expression instanceof Comparison) {
+			$this->_quoteComparison($expression);
+			return;
+		}
+
+		if ($expression instanceof OrderByExpression) {
+			$this->_quoteOrderBy($expression);
+			return;
+		}
+
+		if ($expression instanceof IdentifierExpression) {
+			$this->_quoteIndetifierExpression($expression);
+			return;
+		}
 	}
 
 /**
@@ -176,6 +182,20 @@ class IdentifierQuoter {
 		$field = $expression->getField();
 		if (is_string($field)) {
 			$expression->field($this->_driver->quoteIdentifier($field));
+		} elseif (is_array($field)) {
+			$quoted = [];
+			foreach ($field as $f) {
+				$quoted[] = $this->_driver->quoteIdentifier($f);
+			}
+			$expression->field($quoted);
+		} elseif ($field instanceof ExpressionInterface) {
+			$expression->field($this->quoteExpression($field));
+		}
+
+		$value = $expression->getValue();
+		if ($value instanceof ExpressionInterface) {
+			$this->quoteExpression($value);
+			$expression->value($value);
 		}
 	}
 

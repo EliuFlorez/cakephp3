@@ -1,7 +1,5 @@
 <?php
 /**
- * PHP Version 5.4
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -177,7 +175,7 @@ class Type {
  * @return mixed
  */
 	protected function _basicTypeCast($value, Driver $driver) {
-		if (is_null($value)) {
+		if ($value === null) {
 			return null;
 		}
 
@@ -198,7 +196,7 @@ class Type {
  * @return mixed
  */
 	public function toStatement($value, Driver $driver) {
-		if (is_null($value)) {
+		if ($value === null) {
 			return PDO::PARAM_NULL;
 		}
 

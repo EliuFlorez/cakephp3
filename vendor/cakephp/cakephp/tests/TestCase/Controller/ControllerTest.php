@@ -730,7 +730,7 @@ class ControllerTest extends TestCase {
 		$response = $this->getMock('Cake\Network\Response');
 
 		$Controller = new TestController($url, $response);
-		$Controller->invokeAction($url);
+		$Controller->invokeAction();
 	}
 
 /**
@@ -746,7 +746,7 @@ class ControllerTest extends TestCase {
 		$response = $this->getMock('Cake\Network\Response');
 
 		$Controller = new TestController($url, $response);
-		$Controller->invokeAction($url);
+		$Controller->invokeAction();
 	}
 
 /**
@@ -762,7 +762,7 @@ class ControllerTest extends TestCase {
 		$response = $this->getMock('Cake\Network\Response');
 
 		$Controller = new TestController($url, $response);
-		$Controller->invokeAction($url);
+		$Controller->invokeAction();
 	}
 
 /**
@@ -778,7 +778,7 @@ class ControllerTest extends TestCase {
 		$response = $this->getMock('Cake\Network\Response');
 
 		$Controller = new TestController($url, $response);
-		$Controller->invokeAction($url);
+		$Controller->invokeAction();
 	}
 
 /**
@@ -794,7 +794,7 @@ class ControllerTest extends TestCase {
 		$response = $this->getMock('Cake\Network\Response');
 
 		$Controller = new TestController($url, $response);
-		$Controller->invokeAction($url);
+		$Controller->invokeAction();
 	}
 
 /**
@@ -814,7 +814,7 @@ class ControllerTest extends TestCase {
 		$response = $this->getMock('Cake\Network\Response');
 
 		$Controller = new TestController($url, $response);
-		$Controller->invokeAction($url);
+		$Controller->invokeAction();
 	}
 
 /**
@@ -832,7 +832,7 @@ class ControllerTest extends TestCase {
 		$response = $this->getMock('Cake\Network\Response');
 
 		$Controller = new TestController($url, $response);
-		$result = $Controller->invokeAction($url);
+		$result = $Controller->invokeAction();
 		$this->assertEquals('I am from the controller.', $result);
 	}
 
@@ -853,6 +853,40 @@ class ControllerTest extends TestCase {
 		$request = new Request('pages/home');
 		$Controller = new \TestApp\Controller\PagesController($request, $response);
 		$this->assertEquals('Pages', $Controller->viewPath);
+	}
+
+/**
+ * Test the components() method.
+ *
+ * @return void
+ */
+	public function testComponents() {
+		$request = new Request('/');
+		$response = $this->getMock('Cake\Network\Response');
+
+		$controller = new TestController($request, $response);
+		$this->assertInstanceOf('Cake\Controller\ComponentRegistry', $controller->components());
+
+		$result = $controller->components();
+		$this->assertSame($result, $controller->components());
+	}
+
+/**
+ * Test adding a component
+ *
+ * @return void
+ */
+	public function testAddComponent() {
+		$request = new Request('/');
+		$response = $this->getMock('Cake\Network\Response');
+
+		$controller = new TestController($request, $response);
+		$result = $controller->addComponent('Paginator');
+		$this->assertInstanceOf('Cake\Controller\Component\PaginatorComponent', $result);
+		$this->assertSame($result, $controller->Paginator);
+
+		$registry = $controller->components();
+		$this->assertTrue(isset($registry->Paginator));
 	}
 
 }

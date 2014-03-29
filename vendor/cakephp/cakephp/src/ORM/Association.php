@@ -417,9 +417,7 @@ abstract class Association {
 			}
 		}
 
-		$options['conditions'] = $query->newExpr()->add($options['conditions']);
 		$dummy = $target->query()->eagerLoaded(true);
-
 		if (!empty($options['queryBuilder'])) {
 			$dummy = $options['queryBuilder']($dummy);
 			if (!($dummy instanceof Query)) {
@@ -430,10 +428,11 @@ abstract class Association {
 			}
 		}
 
+		$dummy->where($options['conditions']);
 		$this->_dispatchBeforeFind($dummy);
 
 		$joinOptions = ['table' => 1, 'conditions' => 1, 'type' => 1];
-		$options['conditions']->add($dummy->clause('where') ?: []);
+		$options['conditions'] = $dummy->clause('where');
 		$query->join([$target->alias() => array_intersect_key($options, $joinOptions)]);
 
 		$this->_appendFields($query, $dummy, $options);
@@ -446,9 +445,11 @@ abstract class Association {
  * source results.
  *
  * @param array $row
+ * @param boolean $joined Whether or not the row is a result of a direct join
+ * with this association
  * @return array
  */
-	public function transformRow($row) {
+	public function transformRow($row, $joined) {
 		$sourceAlias = $this->source()->alias();
 		$targetAlias = $this->target()->alias();
 		if (isset($row[$sourceAlias])) {

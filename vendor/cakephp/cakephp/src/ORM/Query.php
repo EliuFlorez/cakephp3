@@ -456,13 +456,14 @@ class Query extends DatabaseQuery {
 	}
 
 /**
- * Return the COUNT(*) for for the query.
+ * Returns the COUNT(*) for the query.
  *
  * @return integer
  */
 	public function count() {
 		$query = clone $this;
 		$query->limit(null);
+		$query->order([], true);
 		$query->offset(null);
 		$query->mapReduce(null, null, true);
 		$query->formatResults(null, true);

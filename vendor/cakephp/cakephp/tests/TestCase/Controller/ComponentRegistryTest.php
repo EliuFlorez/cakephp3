@@ -76,7 +76,7 @@ class ComponentRegistryTest extends TestCase {
 		$result = $this->Components->load('Cookie', array('className' => __NAMESPACE__ . '\CookieAliasComponent', 'somesetting' => true));
 		$this->assertInstanceOf(__NAMESPACE__ . '\CookieAliasComponent', $result);
 		$this->assertInstanceOf(__NAMESPACE__ . '\CookieAliasComponent', $this->Components->Cookie);
-		$this->assertTrue($this->Components->Cookie->settings['somesetting']);
+		$this->assertTrue($this->Components->Cookie->config('somesetting'));
 
 		$result = $this->Components->loaded();
 		$this->assertEquals(array('Cookie'), $result, 'loaded() results are wrong.');
@@ -176,6 +176,21 @@ class ComponentRegistryTest extends TestCase {
 		$this->assertCount(0, $eventManager->listeners('Controller.startup'));
 
 		$this->assertNotSame($instance, $this->Components->load('Auth'));
+	}
+
+/**
+ * Test unloading.
+ *
+ * @return void
+ */
+	public function testUnload() {
+		$eventManager = $this->Components->getController()->getEventManager();
+
+		$result = $this->Components->load('Auth');
+		$this->Components->unload('Auth');
+
+		$this->assertFalse(isset($this->Components->Auth), 'Should be gone');
+		$this->assertCount(0, $eventManager->listeners('Controller.startup'));
 	}
 
 }

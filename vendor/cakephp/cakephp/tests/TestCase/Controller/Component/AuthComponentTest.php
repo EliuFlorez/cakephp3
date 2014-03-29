@@ -1,7 +1,5 @@
 <?php
 /**
- * AuthComponentTest file
- *
  * CakePHP(tm) Tests <http://book.cakephp.org/2.0/en/development/testing.html>
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -79,7 +77,7 @@ class AuthComponentTest extends TestCase {
 		$this->Controller = new AuthTestController($request, $this->getMock('Cake\Network\Response'));
 		$this->Controller->constructClasses();
 
-		$this->Auth = new TestAuthComponent($this->Controller->Components);
+		$this->Auth = new TestAuthComponent($this->Controller->components());
 		$this->Auth->request = $request;
 		$this->Auth->response = $this->getMock('Cake\Network\Response');
 		AuthComponent::$sessionKey = 'Auth.User';
@@ -139,7 +137,7 @@ class AuthComponentTest extends TestCase {
  */
 	public function testLogin() {
 		$AuthLoginFormAuthenticate = $this->getMock(
-			'Cake\Controller\Componenent\Auth\FormAuthenticate',
+			'Cake\Controller\Component\Auth\FormAuthenticate',
 			array('authenticate'), array(), '', false
 		);
 		$this->Auth->authenticate = array(
@@ -340,7 +338,7 @@ class AuthComponentTest extends TestCase {
 		);
 		$objects = $this->Controller->Auth->constructAuthorize();
 		$result = $objects[0];
-		$this->assertEquals('controllers/', $result->settings['actionPath']);
+		$this->assertEquals('controllers/', $result->config('actionPath'));
 	}
 
 /**
@@ -371,7 +369,7 @@ class AuthComponentTest extends TestCase {
 		);
 		$objects = $this->Controller->Auth->constructAuthenticate();
 		$result = $objects[0];
-		$this->assertEquals('AuthUsers', $result->settings['userModel']);
+		$this->assertEquals('AuthUsers', $result->config('userModel'));
 	}
 
 /**
@@ -752,7 +750,7 @@ class AuthComponentTest extends TestCase {
 		$this->Auth->Session = $this->getMock(
 			'Cake\Controller\Component\SessionComponent',
 			array('setFlash'),
-			array($Controller->Components)
+			array($Controller->components())
 		);
 
 		$Controller->expects($this->once())
@@ -790,7 +788,7 @@ class AuthComponentTest extends TestCase {
 		$this->Auth->Session = $this->getMock(
 			'Cake\Controller\Component\SessionComponent',
 			array('setFlash'),
-			array($Controller->Components)
+			array($Controller->components())
 		);
 
 		$Controller->expects($this->once())
@@ -1066,7 +1064,7 @@ class AuthComponentTest extends TestCase {
  */
 	public function testLoginWithRequestData() {
 		$RequestLoginMockAuthenticate = $this->getMock(
-			'Cake\Controller\Componenent\Auth\FormAuthenticate',
+			'Cake\Controller\Component\Auth\FormAuthenticate',
 			array('authenticate'), array(), '', false
 		);
 		$request = new Request('users/login');

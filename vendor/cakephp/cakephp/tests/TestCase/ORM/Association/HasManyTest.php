@@ -1,7 +1,5 @@
 <?php
 /**
- * PHP Version 5.4
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -134,14 +132,14 @@ class HasManyTest extends \Cake\TestSuite\TestCase {
 		$callable = $association->eagerLoader(compact('keys', 'query'));
 		$row = ['Authors__id' => 1, 'username' => 'author 1'];
 		$result = $callable($row);
-		$row['Articles__Articles'] = [
+		$row['Articles___collection_'] = [
 			['id' => 2, 'title' => 'article 2', 'author_id' => 1]
 			];
 		$this->assertEquals($row, $result);
 
 		$row = ['Authors__id' => 2, 'username' => 'author 2'];
 		$result = $callable($row);
-		$row['Articles__Articles'] = [
+		$row['Articles___collection_'] = [
 			['id' => 1, 'title' => 'article 1', 'author_id' => 2]
 			];
 		$this->assertEquals($row, $result);
@@ -349,14 +347,14 @@ class HasManyTest extends \Cake\TestSuite\TestCase {
 		]);
 		$row = ['Authors__id' => 1, 'username' => 'author 1'];
 		$result = $callable($row);
-		$row['Articles__Articles'] = [
+		$row['Articles___collection_'] = [
 			['id' => 2, 'title' => 'article 2', 'author_id' => 1]
 		];
 		$this->assertEquals($row, $result);
 
 		$row = ['Authors__id' => 2, 'username' => 'author 2'];
 		$result = $callable($row);
-		$row['Articles__Articles'] = [
+		$row['Articles___collection_'] = [
 			['id' => 1, 'title' => 'article 1', 'author_id' => 2]
 		];
 		$this->assertEquals($row, $result);
@@ -449,14 +447,14 @@ class HasManyTest extends \Cake\TestSuite\TestCase {
 		$callable = $association->eagerLoader(compact('keys', 'query'));
 		$row = ['Authors__id' => 2, 'Authors__site_id' => 10, 'username' => 'author 1'];
 		$result = $callable($row);
-		$row['Articles__Articles'] = [
+		$row['Articles___collection_'] = [
 			['id' => 1, 'title' => 'article 1', 'author_id' => 2, 'site_id' => 10]
 		];
 		$this->assertEquals($row, $result);
 
 		$row = ['Authors__id' => 1, 'username' => 'author 2', 'Authors__site_id' => 20];
 		$result = $callable($row);
-		$row['Articles__Articles'] = [
+		$row['Articles___collection_'] = [
 			['id' => 2, 'title' => 'article 2', 'author_id' => 1, 'site_id' => 20]
 		];
 		$this->assertEquals($row, $result);
@@ -631,9 +629,9 @@ class HasManyTest extends \Cake\TestSuite\TestCase {
 		$query->expects($this->once())->method('join')->with([
 			'Articles' => [
 				'conditions' => new QueryExpression([
+					'a' => 1,
 					'Articles.is_active' => true,
 					['Authors.id' => $field],
-					new QueryExpression(['a' => 1])
 				]),
 				'type' => 'INNER',
 				'table' => 'articles'

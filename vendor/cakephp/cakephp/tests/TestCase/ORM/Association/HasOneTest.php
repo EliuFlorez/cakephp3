@@ -1,7 +1,5 @@
 <?php
 /**
- * PHP Version 5.4
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -193,9 +191,9 @@ class HasOneTest extends \Cake\TestSuite\TestCase {
 		$query->expects($this->once())->method('join')->with([
 			'Profiles' => [
 				'conditions' => new QueryExpression([
+					'a' => 1,
 					'Profiles.is_active' => true,
 					['Users.id' => $field],
-					new QueryExpression(['a' => 1])
 				]),
 				'type' => 'INNER',
 				'table' => 'profiles'

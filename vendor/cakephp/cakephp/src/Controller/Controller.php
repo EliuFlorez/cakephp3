@@ -195,9 +195,9 @@ class Controller extends Object implements EventListener {
 /**
  * Instance of ComponentRegistry used to create Components
  *
- * @var ComponentRegistry
+ * @var \Cake\Controller\ComponentRegistry
  */
-	public $Components = null;
+	protected $_components = null;
 
 /**
  * Array containing the names of components this controller uses. Component names
@@ -319,7 +319,38 @@ class Controller extends Object implements EventListener {
 		if ($response instanceof Response) {
 			$this->response = $response;
 		}
-		$this->Components = new ComponentRegistry($this);
+	}
+
+/**
+ * Get the component registry for this controller.
+ *
+ * @return \Cake\Controller\ComponentRegistry
+ */
+	public function components() {
+		if ($this->_components === null) {
+			$this->_components = new ComponentRegistry($this);
+		}
+		return $this->_components;
+	}
+
+/**
+ * Add a component to the controller's registry.
+ *
+ * This method will also set the component to a property.
+ * For example:
+ *
+ * `$this->addComponent('DebugKit.Toolbar');`
+ *
+ * Will result in a `Toolbar` property being set.
+ *
+ * @param string $name The name of the component to load.
+ * @param array $config The config for the component.
+ * @return \Cake\Controller\Component
+ */
+	public function addComponent($name, $config = []) {
+		list(, $prop) = pluginSplit($name);
+		$this->{$prop} = $this->components()->load($name, $config);
+		return $this->{$prop};
 	}
 
 /**
@@ -374,15 +405,18 @@ class Controller extends Object implements EventListener {
  * Dispatches the controller action. Checks that the action
  * exists and isn't private.
  *
- * @param \Cake\Network\Request $request
  * @return mixed The resulting response.
+ * @throws \Cake\Error\Exception When request is not set.
  * @throws \Cake\Error\PrivateActionException When actions are not public or prefixed by _
  * @throws \Cake\Error\MissingActionException When actions are not defined.
  */
-	public function invokeAction(Request $request) {
+	public function invokeAction() {
 		try {
+			$request = $this->request;
+			if (!isset($request)) {
+				throw new Error\Exception('No Request object configured. Cannot invoke action');
+			}
 			$method = new \ReflectionMethod($this, $request->params['action']);
-
 			if ($this->_isPrivateAction($method, $request)) {
 				throw new Error\PrivateActionException(array(
 					'controller' => $this->name . "Controller",
@@ -486,10 +520,11 @@ class Controller extends Object implements EventListener {
 		if (empty($this->components)) {
 			return;
 		}
-		$components = $this->Components->normalizeArray($this->components);
+		$registry = $this->components();
+		$components = $registry->normalizeArray($this->components);
 		foreach ($components as $properties) {
 			list(, $class) = pluginSplit($properties['class']);
-			$this->{$class} = $this->Components->load($properties['class'], $properties['settings']);
+			$this->{$class} = $registry->load($properties['class'], $properties['settings']);
 		}
 	}
 
@@ -677,7 +712,7 @@ class Controller extends Object implements EventListener {
 			}
 		}
 
-		$this->Paginator = $this->Components->load('Paginator');
+		$this->Paginator = $this->addComponent('Paginator');
 		if (
 			!in_array('Paginator', $this->helpers) &&
 			!array_key_exists('Paginator', $this->helpers)

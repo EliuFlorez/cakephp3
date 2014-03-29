@@ -1,7 +1,5 @@
 <?php
 /**
- * PHP Version 5.4
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -185,7 +183,7 @@ abstract class Driver {
  * @return string String for use in schema definitions.
  */
 	public function schemaValue($value) {
-		if (is_null($value)) {
+		if ($value === null) {
 			return 'NULL';
 		}
 		if ($value === false) {

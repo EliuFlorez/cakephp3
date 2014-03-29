@@ -1,7 +1,5 @@
 <?php
 /**
- * PHP Version 5.4
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -226,7 +224,7 @@ class BelongsToManyTest extends TestCase {
 			'Tags' => [
 				'conditions' => new QueryExpression([
 					'Tags.name' => 'cake'
-				]),
+				], ['Tags.name' => 'string']),
 				'type' => 'INNER',
 				'table' => 'tags'
 			]
@@ -273,7 +271,7 @@ class BelongsToManyTest extends TestCase {
 			'Tags' => [
 				'conditions' => new QueryExpression([
 					'Tags.name' => 'cake'
-				]),
+				], ['Tags.name' => 'string']),
 				'type' => 'INNER',
 				'table' => 'tags'
 			]
@@ -313,9 +311,9 @@ class BelongsToManyTest extends TestCase {
 		$query->expects($this->at(0))->method('join')->with([
 			'Tags' => [
 				'conditions' => new QueryExpression([
+					'a' => 1,
 					'Tags.name' => 'cake',
-					new QueryExpression(['a' => 1])
-				]),
+				], ['Tags.name' => 'string']),
 				'type' => 'INNER',
 				'table' => 'tags'
 			]
@@ -371,7 +369,7 @@ class BelongsToManyTest extends TestCase {
 			'Tags' => [
 				'conditions' => new QueryExpression([
 					'Tags.name' => 'cake'
-				]),
+				], ['Tags.name' => 'string']),
 				'type' => 'INNER',
 				'table' => 'tags'
 			]
@@ -441,14 +439,14 @@ class BelongsToManyTest extends TestCase {
 		$callable = $association->eagerLoader(compact('keys', 'query'));
 		$row = ['Articles__id' => 1, 'title' => 'article 1'];
 		$result = $callable($row);
-		$row['Tags__Tags'] = [
+		$row['Tags___collection_'] = [
 			['id' => 1, 'name' => 'foo', '_joinData' => ['article_id' => 1]]
 		];
 		$this->assertEquals($row, $result);
 
 		$row = ['Articles__id' => 2, 'title' => 'article 2'];
 		$result = $callable($row);
-		$row['Tags__Tags'] = [
+		$row['Tags___collection_'] = [
 			['id' => 2, 'name' => 'bar', '_joinData' => ['article_id' => 2]]
 		];
 		$this->assertEquals($row, $result);
@@ -684,14 +682,14 @@ class BelongsToManyTest extends TestCase {
 			'keys' => []
 		]);
 
-		$row['Tags__Tags'] = [
+		$row['Tags___collection_'] = [
 			['id' => 1, 'name' => 'foo', '_joinData' => ['article_id' => 1]]
 		];
 		$row['Articles__id'] = 1;
 		$result = $callable($row);
 		$this->assertEquals($row, $result);
 
-		$row['Tags__Tags'] = [
+		$row['Tags___collection_'] = [
 			['id' => 2, 'name' => 'bar', '_joinData' => ['article_id' => 2]]
 		];
 		$row['Articles__id'] = 2;
@@ -836,7 +834,7 @@ class BelongsToManyTest extends TestCase {
 		$callable = $association->eagerLoader(compact('keys', 'query'));
 		$row = ['Articles__id' => 1, 'title' => 'article 1', 'Articles__site_id' => 1];
 		$result = $callable($row);
-		$row['Tags__Tags'] = [
+		$row['Tags___collection_'] = [
 			[
 				'id' => 1,
 				'name' => 'foo',
@@ -848,7 +846,7 @@ class BelongsToManyTest extends TestCase {
 
 		$row = ['Articles__id' => 2, 'title' => 'article 2', 'Articles__site_id' => 2];
 		$result = $callable($row);
-		$row['Tags__Tags'] = [
+		$row['Tags___collection_'] = [
 			[
 				'id' => 2,
 				'name' => 'bar',
